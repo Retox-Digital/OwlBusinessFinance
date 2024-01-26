@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Owl Business Finance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet" />
+		<link href="custom.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+	</head>
+	<body>
+		<!--section One starts-->
+		<div class="bg-white">
+			<header class="mx-auto container py-5 px-4 xl:px-0">
+				<div class="flex items-center justify-between">
+					<a href="index.html" class="w-40">
+						<img src="logo.png" alt="Owl Business Finance">
+					</a>
+					<div>
+						<div class="sm:block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+							<div class="md:hidden cursor-pointer mr-2 sm:mr-10 text-gray-700 hover:text-gray-700 focus:outline-none transition duration-150 ease-in-out">
+								<ul class="z-40 p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-16 md:mt-16 hidden">
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="loans.html">Loans</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="grants.html">Grants</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="equity-finance.html">Equity Finance</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="invoice-finance.html">Invoice Finance</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="vehicle-leasing.html">Vehicle / Machinery Leasing</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="other-finance.html">Other Finance options</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">
+											Sign In
+										</a>
+									</li>
+								</ul>
+								<div>
+									<div class="show-m-menu md:hidden" onclick="MenuHandler(this,true)">
+										<svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2C3E50" fill="none" stroke-linecap="round">
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<line x1="4" y1="8" x2="20" y2="8" />
+											<line x1="4" y1="16" x2="20" y2="16" />
+										</svg>
+									</div>
+									<div onclick="MenuHandler(this,false)" class="hidden close-m-menu p-1">
+										<svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<line x1="18" y1="6" x2="6" y2="18" />
+											<line x1="6" y1="6" x2="18" y2="18" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="menu" class="md:block lg:block hidden">
+							<div class="block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 fixed focus:outline-none z-30 top-0 pt-8">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" />
+									<line x1="18" y1="6" x2="6" y2="18" />
+									<line x1="6" y1="6" x2="18" y2="18" />
+								</svg>
+							</div>
+							<ul class="flex md:flex text-3xl md:text-base lg:text-base lg:flex flex-col md:flex-row lg:flex-row justify-center items-center fixed md:relative lg:relative top-0 bottom-0 left-0 right-0 bg-white z-20">
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="loans.html">Loans</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="grants.html">Grants</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="equity-finance.html">Equity Finance</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="invoice-finance.html">Invoice Finance</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-secondary hover:text-gray-500 pt-10 md:pt-0" href="vehicle-leasing.html">Vehicle / Machinery Leasing</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="other-finance.html">Other Finance options</a>
+								</li>
+								<li class="flex items-center">
+									<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">
+										Sign In
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!--section One ends-->
+
+		<!--Features section starts-->
+		<div>
+			<div class="bg-light">
+				<section class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-col sm:flex-row md:flex-row lg:flex-row">
+						<div class="flex flex-col sm:w-1/2 md:w-7/12 px-4 justify-center py-12">
+							<h1 class="text-5xl sm:text-5xl font-extrabold leading-tight text-primary tracking-wide">Vehicle &amp; Machinery Leasing</h1>
+							<p class="text-lg text-gray-600 font-light leading-relaxed pt-8">Smart business decisions often involve financing either a single company vehicle or an entire fleet.</p>
+							<p class="text-md text-gray-600 font-light leading-relaxed pt-4 pb-8">Rather than burdening cash flow and locking up valuable capital in vehicles, opt for a more strategic approach by spreading the cost over time. Pay for the vehicles as you use them, allowing them to generate profits for your business. Enjoy the flexibility of selecting from purchase or lease options and harness the tax benefits offered by electric cars. Additionally, you can free up liquid cash from existing vehicles you own. Whichever path you decide, business car finance puts you in control, giving you the power to drive your business forward with confidence.</p>
+							<div class="py-2 mt-8">
+								<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">Sign In</a>
+							</div>
+						</div>
+						<div class="flex flex-col sm:w-1/2 md:w-5/12 py-12 px-4 justify-center md:mb-0">
+							<img src="vehicle-leasing.jpg" alt=""/>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!--Features section ends-->
+
+		<div class="py-12">
+			<div class="md:max-w-8xl mx-auto container">
+				<div class="flex flex-wrap justify-center sm:justify-between">
+					<div class="flex flex-col px-4 w-full text-center">
+						<h2 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide py-8">Vehicle finance</h2>
+					</div>
+					<div class="flex flex-col w-full sm:w-1/2 md:w-1/4 mb-6">
+						<div class="px-8 h-full md:border-r-2">
+							<h4 class="text-lg font-extrabold leading-tight text-gray-800 text-center py-2">
+								Hire purchase (HP)
+							</h4>
+							<p class="text-gray-600 text-center py-2"><strong class="font-extrabold text-gray-800">Safeguard your business's cash flow</strong> by opting for a smarter approach to acquiring new or used vehicles. Spread the cost over time, enabling you to utilize the vehicle(s) as you make payments. With a modest deposit, you can repay the remaining balance through equal monthly installments. No need to fret about fluctuating interest rates, hidden costs, or mileage charges. With Hire Purchase (HP), your payments remain fixed throughout the loan term, and once you make the last payment, you become the proud owner of the vehicle(s) outright. Enjoy peace of mind and complete control over your business's transportation needs with HP financing.</p>
+						</div>
+					</div>
+					<div class="flex flex-col w-full sm:w-1/2 md:w-1/4 mb-6">
+						<div class="px-8 h-full md:border-r-2">
+							<h4 class="text-lg font-extrabold leading-tight text-gray-800 text-center py-2">
+								Finance lease
+							</h4>
+							<p class="text-gray-600 text-center py-2"><strong class="font-extrabold text-gray-800">Benefit from low monthly payments</strong> and maximum contract flexibility. Lease used or new vehicles and reclaim up to 100% of the VAT charged on your monthly payments – including maintenance, mileage, and service costs. Choose to buy the vehicle(s) at the end of the contract, opt for an operating agreement that could pay you back a surplus, or simply rent the vehicle(s) on long-term hire and hand them back at contract end.</p>
+						</div>
+					</div>
+					<div class="flex flex-col w-full sm:w-1/2 md:w-1/4 mb-6">
+						<div class="px-8 h-full md:border-r-2">
+							<h4 class="text-lg font-extrabold leading-tight text-gray-800 text-center py-2">
+								Sale and leaseback
+							</h4>
+							<p class="text-gray-600 text-center py-2"><strong class="font-extrabold text-gray-800">Discover the benefits of budget-friendly monthly payments</strong> and unmatched contract flexibility. Whether you prefer new or used vehicles, leasing grants you the opportunity to reclaim up to 100% of the VAT charged on your monthly payments, which also covers maintenance, mileage, and service costs. As the contract draws to a close, multiple options await you: purchase the vehicle(s), consider an operating agreement that may provide a surplus reimbursement, or opt for long-term hire and return the vehicle(s) at the contract's end. Embrace the freedom to customize your vehicle leasing arrangement according to your business needs and preferences.</p>
+						</div>
+					</div>
+					<div class="flex flex-col w-full sm:w-1/2 md:w-1/4 mb-6">
+						<div class="px-8 h-full">
+							<h4 class="text-lg font-extrabold leading-tight text-gray-800 text-center py-2">
+								Van refinance
+							</h4>
+							<p class="text-gray-600 text-center py-2"><strong class="font-extrabold text-gray-800">Effortlessly manage the lump sum payment</strong> at the end of an HP with balloon purchase scheme, without impacting your cash flow. Retain the vehicle and gradually repay the lump sum over time. Alternatively, opt for van refinance to secure a more favorable interest rate from another lender, or sell the van to generate liquid cash and then rent the vehicle back. The choice is yours, and with these flexible options, you can navigate your vehicle financing needs with ease.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-12">
+				<section class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-wrap justify-center sm:justify-between">
+						<div class="flex flex-col w-full px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8 text-center">
+							<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide">Why use Owl Finance?</h1>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 mb-6">
+							<div class="relative pl-24 pr-12">
+								<p class="text-xl border rounded-full absolute bg-gray-100 bottom-0 right-0 top-6 left-0 rounded-3xl h-16 w-16 text-center py-4">1</p>
+								<p class="text-xl text-primary font-light leading-relaxed pt-4">A dedicated funding manager will help find a tailored solution to your needs</p>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 mb-6">
+							<div class="relative pl-24 pr-12">
+								<p class="text-xl border rounded-full absolute bg-gray-100 bottom-0 right-0 top-6 left-0 rounded-3xl h-16 w-16 text-center py-4">2</p>
+								<p class="text-xl text-primary font-light leading-relaxed pt-4">Owl Finance is fully authorised and regulated by the Financial Conduct Authority</p>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 mb-6">
+							<div class="relative pl-24 pr-12">
+								<p class="text-xl border rounded-full absolute bg-gray-100 bottom-0 right-0 top-6 left-0 rounded-3xl h-16 w-16 text-center py-4">3</p>
+								<p class="text-xl text-primary font-light leading-relaxed pt-4">Owl Finance's technology paired with our funding managers networks means you'll have access to deals only available through us</p>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 mb-6">
+							<div class="relative pl-24 pr-12">
+								<p class="text-xl border rounded-full absolute bg-gray-100 bottom-0 right-0 top-6 left-0 rounded-3xl h-16 w-16 text-center py-4">4</p>
+								<p class="text-xl text-primary font-light leading-relaxed pt-4">Get funding fast - we can help you get finance in as little as 48 hours</p>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full py-2 mt-8">
+							<p class="text-center"><a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">Sign In</a></p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		<!--Footer Starts-->
+		<div class="w-full border-gray-300 border-t lg:w-11/12 md:w-11/12 lg:mx-auto md:mx-auto">
+			<div class="container mx-auto py-16">
+				<div class="xl:flex flex-wrap justify-between pl-3 sm:pl-0">
+					<div class="w-11/12 xl:w-2/6 mx-auto lg:mx-0 xl:mx-0 mb-6 xl:mb-0">
+						<p class="text-gray-800 text-base">2020 PMC CO. All Rights Reserved</p>
+					</div>
+					<div class="w-11/12 xl:w-2/6 mx-auto lg:mx-0 xl:mx-0 mb-6 lg:mb-0 xl:mb-0">
+						<ul class="xl:flex lg:flex md:flex sm:flex justify-between">
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Terms of service</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Privacy Policy</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Security</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Sitemap</a></li>
+						</ul>
+					</div>
+					<div class="w-11/12 xl:w-1/6 lg:w-1/6 sm:w-11/12 mx-auto lg:mx-0 xl:mx-0 mb-6 lg:mb-0 xl:mb-0 mt-8 lg:mt-8 xl:mt-0">
+						<div class="flex justify-start sm:justify-start xl:justify-end space-x-6 pr-2 xl:pr-0 lg:pr-0 md:pr-0 sm:pr-0">
+							<div>
+								<a href="#">
+									<svg aria-label="Twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+										<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Instagram" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+										<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+										<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+										<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Dribble" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dribbble" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#718096" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										<path stroke="none" d="M0 0h24v24H0z" />
+										<circle cx="12" cy="12" r="9" />
+										<path d="M9 3.6c5 6 7 10.5 7.5 16.2" />
+										<path d="M6.4 19c3.5-3.5 6-6.5 14.5-6.4" />
+										<path d="M3.1 10.75c5 0 9.814-.38 15.314-5" />
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Github" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Footer Ends-->
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>

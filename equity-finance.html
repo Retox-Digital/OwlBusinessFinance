@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Owl Business Finance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet" />
+		<link href="custom.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+	</head>
+	<body>
+		<!--section One starts-->
+		<div class="bg-white">
+			<header class="mx-auto container py-5 px-4 xl:px-0">
+				<div class="flex items-center justify-between">
+					<a href="https://www.owlbusinessfinance.co.uk/" class="w-40">
+						<img src="logo.png" alt="Owl Business Finance">
+					</a>
+					<div>
+						<div class="sm:block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+							<div class="md:hidden cursor-pointer mr-2 sm:mr-10 text-gray-700 hover:text-gray-700 focus:outline-none transition duration-150 ease-in-out">
+								<ul class="z-40 p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-16 md:mt-16 hidden">
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="loans.html">Loans</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="grants.html">Grants</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="equity-finance.html">Equity Finance</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="invoice-finance.html">Invoice Finance</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="vehicle-leasing.html">Vehicle / Machinery Leasing</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="other-finance.html">Other Finance options</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">
+											Sign In
+										</a>
+									</li>
+								</ul>
+								<div>
+									<div class="show-m-menu md:hidden" onclick="MenuHandler(this,true)">
+										<svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2C3E50" fill="none" stroke-linecap="round">
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<line x1="4" y1="8" x2="20" y2="8" />
+											<line x1="4" y1="16" x2="20" y2="16" />
+										</svg>
+									</div>
+									<div onclick="MenuHandler(this,false)" class="hidden close-m-menu p-1">
+										<svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<line x1="18" y1="6" x2="6" y2="18" />
+											<line x1="6" y1="6" x2="18" y2="18" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="menu" class="md:block lg:block hidden">
+							<div class="block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 fixed focus:outline-none z-30 top-0 pt-8">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" />
+									<line x1="18" y1="6" x2="6" y2="18" />
+									<line x1="6" y1="6" x2="18" y2="18" />
+								</svg>
+							</div>
+							<ul class="flex md:flex text-3xl md:text-base lg:text-base lg:flex flex-col md:flex-row lg:flex-row justify-center items-center fixed md:relative lg:relative top-0 bottom-0 left-0 right-0 bg-white z-20">
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="loans.html">Loans</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="grants.html">Grants</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-secondary hover:text-gray-500 pt-10 md:pt-0" href="equity-finance.html">Equity Finance</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="invoice-finance.html">Invoice Finance</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="vehicle-leasing.html">Vehicle / Machinery Leasing</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="other-finance.html">Other Finance options</a>
+								</li>
+								<li class="flex items-center">
+									<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">
+										Sign In
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!--section One ends-->
+
+		<!--Features section starts-->
+		<div>
+			<div class="bg-light">
+				<section class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-col sm:flex-row md:flex-row lg:flex-row">
+						<div class="flex flex-col sm:w-1/2 md:w-7/12 px-4 justify-center py-12">
+							<h1 class="text-5xl sm:text-5xl font-extrabold leading-tight text-primary tracking-wide">Simplify the process of attracting investors for your business</h1>
+							<p class="text-lg text-gray-600 font-light leading-relaxed pt-8">Owl Finance employs intelligent matching algorithms to connect your business with the most appropriate investors drawn from its extensive network, comprising over 200 venture capital funds, angel networks, family offices, and individual angel investors.</p>
+							<div class="py-2 mt-8">
+								<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">Sign In</a>
+							</div>
+						</div>
+						<div class="flex flex-col sm:w-1/2 md:w-5/12 py-12 px-4 justify-center md:mb-0">
+							<img src="equity-finance.jpg" alt=""/>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="py-12">
+				<section class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+						<div class="flex flex-col lg:w-10/12 md:w-10/12 px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8">
+							<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide text-center">Secure fresh capital by offering equity in your business</h1>
+							<p class="text-xl text-primary font-light leading-relaxed pt-8">If your business requires capital for expansion, you have the choice of selling a share of your business in exchange for investment. Equity finance investors will hold a stake in your future earnings. Unlike a loan, there are no interest payments or capital repayments associated with this type of financing.</p>
+							<p class="text-md text-gray-600 font-light leading-relaxed pt-8">Equity finance may be a suitable option for your business if you have an expansion plan or project that traditional lenders like banks are reluctant to support, or if you prefer to avoid the burden of loan repayments.</p>
+							<p class="text-md text-gray-600 font-light leading-relaxed pt-6">The path from startup to a thriving business may involve multiple rounds of equity financing from various types of investors, such as business angels, venture capitalists, and private equity funds. Equity finance offers two clear advantages for businesses:</p>
+							<ul class="text-md text-gray-600 font-light leading-relaxed pt-4 pl-4 list-disc">
+								<li class="text-md text-gray-600 font-light leading-relaxed pt-6">Private investors can contribute additional skills and expertise to your business, along with a valuable network of contacts.</li>
+								<li class="text-md text-gray-600 font-light leading-relaxed pt-6">Investors, particularly because they share in any potential gains, are highly motivated to help your business thrive. This motivation often leads to their willingness to provide additional funding in the future.</li>
+							</ul>
+							<p class="text-md text-gray-600 font-light leading-relaxed pt-6">If you'd like to know more <a target="_blank" href="https://app.swoopfunding.com/get-started?fundingReason=findInvestor" class="text-secondary hover:underline">sign in today</a> for full access to all the options available to you.</p>
+							<p class="py-2 mt-8 text-center">
+								<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">Sign In</a>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!--Features section ends-->
+
+		<!--Features Section Two started-->
+		<div class="py-12">
+			<section class="md:max-w-8xl mx-auto container">
+				<div class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+					<div class="flex flex-col lg:w-10/12 md:w-10/12 px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8">
+						<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide text-center">Frequently asked questions</h1>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">What is equity finance?</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Equity finance involves raising capital by selling shares (equity) of your company to either existing shareholders or new investors who will participate in the company's profits. These individuals who acquire the shares become your company's shareholders.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Equity finance is often a favorable choice for new or small businesses that encounter challenges when seeking traditional loans.</p>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">How does equity financing work?</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Equity financing operates by selling a company's stock in exchange for capital. The percentage of your company that is sold will be determined by the amount invested in the company and its valuation at the time of financing. As your business expands, the value of the investor's ownership stake in your company will also increase.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Businesses have the option to engage in multiple rounds of equity financing, involving various types of investors like business angels, crowdfunding platforms, or venture capitalists (VCs). Each round can bring in new capital and expertise to support your company's growth.</p>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">Debt vs. equity finance</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Equity financing involves selling a portion of your business in exchange for capital, while debt financing entails borrowing money that you must repay with interest, often in the form of a loan.
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Debt financing does not entail giving up any ownership or control of your business, unlike equity financing. However, equity financing is generally considered less risky because there is no obligation to repay the invested funds, which means no monthly repayments are required, and the capital received can be directed toward business growth.
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Both debt financing and equity financing have their advantages, and businesses can benefit from either or both. Businesses seeking substantial capital for rapid growth and expansion often find equity financing more suitable. In contrast, those in need of quick funds to cover everyday expenses and operations may prefer debt financing. The choice between the two depends on the specific financial needs and growth goals of the business.</p>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">Why is debt financing cheaper than equity financing?</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Debt financing is typically (though not universally) more cost-effective than equity financing because equity investors assume greater risk and, consequently, seek higher returns. Moreover, the interest paid on debt financing is often tax-deductible, whereas dividends paid to shareholders are not.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Furthermore, once the loan is fully repaid, your company will have no ongoing obligations to the lender. This characteristic makes debt financing a more economical option than equity financing for profitable companies.</p>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">Advantages of equity finance</p>
+						<ul class="text-md text-gray-600 font-light leading-relaxed pt-4 pl-4 list-disc">
+							<li>Poor Credit History: If your business has a less-than-ideal credit history, it can be challenging to secure debt financing. Equity financing doesn't depend on your creditworthiness, making it a more viable option.</li>
+							<li>No Monthly Repayments: Unlike debt financing, equity financing doesn't impose monthly repayment obligations on your business. This can provide greater financial flexibility.</li>
+							<li>Skills and Experience: Private investors in equity financing often bring valuable skills, experience, and an extensive network of contacts to your business. Their involvement can contribute to your company's growth and success.</li>
+							<li>Motivated Investors: Equity investors have a vested interest in your business's success, as they share in its future profits. This motivation can lead to their willingness to provide ongoing funding and support, which can be advantageous for your business's long-term development.</li>
+						</ul>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">Disadvantages of equity finance</p>
+						<ul class="text-md text-gray-600 font-light leading-relaxed pt-4 pl-4 list-disc">
+							<li>Ownership and Management Influence: Equity investors will hold a share of your business, and in some instances, they may exert influence on management decisions. This can potentially lead to conflicts over strategic choices.</li>
+							<li>Profit Sharing: Sharing profits with investors is a common aspect of equity financing. However, this arrangement may be justified if you are benefiting from their valuable expertise and financial contributions, ultimately driving business growth.</li>
+							<li>Time-Consuming Fundraising: Raising the necessary funds through equity financing can be a time-consuming process, involving activities like investor pitches, negotiations, and due diligence. It requires significant effort and attention to secure the right investors for your business.</li>
+						</ul>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">The Midlands Engine Equity Fund (MEIF) explained</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">The Midlands Engine Equity Fund (MEIF) is a financial initiative that offers business-focused financing solutions, including small business loans, debt finance, proof of concept funding, and equity finance. This program is the result of a collaboration between the British Business Bank and 10 Local Enterprise Partnerships (LEPs) located in the West Midlands and South East Midlands regions.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">MEIF has committed to providing over £250 million in investments to facilitate the growth of small and medium-sized enterprises (SMEs) in the Midlands. It aligns with the government's broader objective of enhancing the region's economy and supporting the development of smaller businesses during the period from 2017 to 2022.</p>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 border-b-2">What are the stages of equity financing?</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">In the course of their development, businesses often seek different types of investors to meet their evolving financial requirements. Here are some key options:</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Family and Friends: In a friends and family round, funds are sourced from individuals who have personal connections with the founders, such as close friends and family members. This round typically relies on the trust and support of those who are already acquainted with the founders.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Various options are available for businesses to secure financing at different stages of their growth. Here are some key sources of investment:</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Business Angels: Private individuals who invest their personal funds in startup or early-stage businesses in exchange for an equity stake.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Seed Enterprise Investment Scheme (SEIS): A government program aimed at securing funding for small, new businesses, offering tax advantages to investors.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Enterprise Investment Scheme (EIS): A government scheme designed to provide funding to small businesses and young companies, offering tax incentives to individual investors who purchase new shares.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Equity Crowdfunding: Funding is raised from a large group of individuals, often referred to as "the crowd."</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Venture Capital: Venture capital funds invest substantial amounts of money in exchange for an equity stake in high-growth startups and early-stage businesses with significant long-term growth potential.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Venture Capital Trusts (VCTs): Listed companies approved by HMRC that invest in or lend money to unlisted companies.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Private Equity: Suitable for established private businesses, private equity funds provide capital in exchange for a significant ownership share.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Initial Public Offering (IPO): This marks the first time a company sells shares to the public, allowing it to become publicly traded on the stock market.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pt-4">Each of these funding sources has its own characteristics, advantages, and requirements, making them suitable for businesses at different stages of development and with various financing needs.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--Features Section Two ended-->
+
+		<!--Footer Starts-->
+		<div class="w-full border-gray-300 border-t lg:w-11/12 md:w-11/12 lg:mx-auto md:mx-auto">
+			<div class="container mx-auto py-16">
+				<div class="xl:flex flex-wrap justify-between pl-3 sm:pl-0">
+					<div class="w-11/12 xl:w-2/6 mx-auto lg:mx-0 xl:mx-0 mb-6 xl:mb-0">
+						<p class="text-gray-800 text-base">2020 PMC CO. All Rights Reserved</p>
+					</div>
+					<div class="w-11/12 xl:w-2/6 mx-auto lg:mx-0 xl:mx-0 mb-6 lg:mb-0 xl:mb-0">
+						<ul class="xl:flex lg:flex md:flex sm:flex justify-between">
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Terms of service</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Privacy Policy</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Security</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Sitemap</a></li>
+						</ul>
+					</div>
+					<div class="w-11/12 xl:w-1/6 lg:w-1/6 sm:w-11/12 mx-auto lg:mx-0 xl:mx-0 mb-6 lg:mb-0 xl:mb-0 mt-8 lg:mt-8 xl:mt-0">
+						<div class="flex justify-start sm:justify-start xl:justify-end space-x-6 pr-2 xl:pr-0 lg:pr-0 md:pr-0 sm:pr-0">
+							<div>
+								<a href="#">
+									<svg aria-label="Twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+										<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Instagram" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+										<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+										<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+										<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Dribble" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dribbble" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#718096" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										<path stroke="none" d="M0 0h24v24H0z" />
+										<circle cx="12" cy="12" r="9" />
+										<path d="M9 3.6c5 6 7 10.5 7.5 16.2" />
+										<path d="M6.4 19c3.5-3.5 6-6.5 14.5-6.4" />
+										<path d="M3.1 10.75c5 0 9.814-.38 15.314-5" />
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Github" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Footer Ends-->
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>

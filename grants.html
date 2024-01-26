@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Owl Business Finance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet" />
+		<link href="custom.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+	</head>
+	<body>
+		<!--section One starts-->
+		<div class="bg-white">
+			<header class="mx-auto container py-5 px-4 xl:px-0">
+				<div class="flex items-center justify-between">
+					<a href="https://www.owlbusinessfinance.co.uk/" class="w-40">
+						<img src="logo.png" alt="Owl Business Finance">
+					</a>
+					<div>
+						<div class="sm:block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+							<div class="md:hidden cursor-pointer mr-2 sm:mr-10 text-gray-700 hover:text-gray-700 focus:outline-none transition duration-150 ease-in-out">
+								<ul class="z-40 p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-16 md:mt-16 hidden">
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="loans.html">Loans</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="grants.html">Grants</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="equity-finance.html">Equity Finance</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="invoice-finance.html">Invoice Finance</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="vehicle-leasing.html">Vehicle / Machinery Leasing</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a class="text-primary hover:text-gray-500 py-2" href="other-finance.html">Other Finance options</a>
+									</li>
+									<li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+										<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">
+											Sign In
+										</a>
+									</li>
+								</ul>
+								<div>
+									<div class="show-m-menu md:hidden" onclick="MenuHandler(this,true)">
+										<svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2C3E50" fill="none" stroke-linecap="round">
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<line x1="4" y1="8" x2="20" y2="8" />
+											<line x1="4" y1="16" x2="20" y2="16" />
+										</svg>
+									</div>
+									<div onclick="MenuHandler(this,false)" class="hidden close-m-menu p-1">
+										<svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" />
+											<line x1="18" y1="6" x2="6" y2="18" />
+											<line x1="6" y1="6" x2="18" y2="18" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="menu" class="md:block lg:block hidden">
+							<div class="block md:hidden lg:hidden text-gray-500 hover:text-gray-700 focus:text-gray-700 fixed focus:outline-none z-30 top-0 pt-8">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" />
+									<line x1="18" y1="6" x2="6" y2="18" />
+									<line x1="6" y1="6" x2="18" y2="18" />
+								</svg>
+							</div>
+							<ul class="flex md:flex text-3xl md:text-base lg:text-base lg:flex flex-col md:flex-row lg:flex-row justify-center items-center fixed md:relative lg:relative top-0 bottom-0 left-0 right-0 bg-white z-20">
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="loans.html">Loans</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-secondary hover:text-gray-500 pt-10 md:pt-0" href="grants.html">Grants</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="equity-finance.html">Equity Finance</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="invoice-finance.html">Invoice Finance</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="vehicle-leasing.html">Vehicle / Machinery Leasing</a>
+								</li>
+								<li class="md:mr-8 lg:mr-10 flex items-center">
+									<a class="text-primary hover:text-gray-500 pt-10 md:pt-0" href="other-finance.html">Other Finance options</a>
+								</li>
+								<li class="flex items-center">
+									<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">
+										Sign In
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!--section One ends-->
+
+		<!--Features section starts-->
+		<div>
+			<div class="bg-light">
+				<section class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-col sm:flex-row md:flex-row lg:flex-row">
+						<div class="flex flex-col sm:w-1/2 md:w-7/12 px-4 justify-center py-12">
+							<h1 class="text-5xl sm:text-5xl font-extrabold leading-tight text-primary tracking-wide">Business Grants</h1>
+							<p class="text-lg text-gray-600 font-light leading-relaxed pt-8">Business grants remain a critical form of government funding for numerous businesses in the UK. They have a substantial impact by initiating fresh capital projects and enabling the pursuit of inventive solutions to tackle some of society's most pressing social issues.</p>
+							<div class="py-2 mt-8">
+								<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">Sign In</a>
+							</div>
+						</div>
+						<div class="flex flex-col sm:w-1/2 md:w-5/12 py-12 px-4 justify-center md:mb-0">
+							<img src="pexels-sora-shimazaki-5669602copy.jpg" class="rounded-lg" alt=""/>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="py-12">
+				<section class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+						<div class="flex flex-col lg:w-10/12 md:w-10/12 px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8 text-center">
+							<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide">How <span class="text-secondary">Owl Finance</span> can help</h1>
+							<p class="text-lg text-primary font-light leading-relaxed pt-2">Register for an account and log in to your Owl Finance profile to access the list of available grants. Presently, our platform features more than 400 grants, and we regularly update it with new opportunities. We suggest reviewing your grant matches at least once every quarter to stay informed about the latest funding options at your disposal.</p>
+							<div class="text-center mt-8">
+								<a href="https://owlbusinessfinance.swoopfunding.com/" target="_blank" class="focus:outline-none mt-10 md:mt-0 bg-primary transition duration-150 ease-in-out text-white rounded-3xl hover:bg-gray-500 px-6 py-3 text-sm">Sign In</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="py-12 bg-primary">
+				<div class="md:max-w-8xl mx-auto container">
+					<div class="flex flex-wrap justify-center sm:justify-between">
+						<div class="flex flex-col px-4 w-full text-center">
+							<h2 class="text-4xl sm:text-4xl font-extrabold leading-tight text-white tracking-wide py-8 mb-4">Help on your application</h2>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 md:w-1/3 mb-6">
+							<div class="flex flex-wrap">
+								<div class="flex flex-col w-3/12 px-3">
+									<img src="icon1.svg" alt="" class="" />
+								</div>
+								<div class="flex flex-col w-9/12 px-3">
+									<p class="text-white"><strong>Timing is essential.</strong> Make certain that you're applying at a suitable stage and have a well-defined opportunity to seize. New funding opportunities become available throughout the year, so it's crucial to regularly consult Owl Finance's grant finder for any new grants for which you may qualify.</p>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 md:w-1/3 mb-6">
+							<div class="flex flex-wrap">
+								<div class="flex flex-col w-3/12 px-3">
+									<img src="icon2.svg" alt="" class="" />
+								</div>
+								<div class="flex flex-col w-9/12 px-3">
+									<p class="text-white"><strong>Clearly define the opportunity</strong> Ensure that you meet the eligibility criteria and align with the specific focus of the grant. It's important to avoid investing time and effort into applying for grants that may not be a good fit for your business.</p>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 md:w-1/3 mb-6">
+							<div class="flex flex-wrap">
+								<div class="flex flex-col w-3/12 px-3">
+									<img src="icon3.svg" alt="" class="" />
+								</div>
+								<div class="flex flex-col w-9/12 px-3">
+									<p class="text-white"><strong>Develop a well-defined project</strong> Clearly outline and emphasize the impact it will have, ensuring it aligns with the grant's scope. To make your application stand out and increase your chances of receiving funding, be thorough in your preparation and ensure all necessary groundwork has been completed.</p>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 md:w-1/3 mb-6">
+							<div class="flex flex-wrap">
+								<div class="flex flex-col w-3/12 px-3">
+									<img src="icon4.svg" alt="" class="" />
+								</div>
+								<div class="flex flex-col w-9/12 px-3">
+									<p class="text-white"><strong>Provide a comprehensive breakdown of the project's expenses</strong> Make sure to justify why each cost is necessary and the precise amount required to cover these expenses. Clarity and justification regarding the budget are essential when applying for funding.</p>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 md:w-1/3 mb-6">
+							<div class="flex flex-wrap">
+								<div class="flex flex-col w-3/12 px-3">
+									<img src="icon5.svg" alt="" class="" />
+								</div>
+								<div class="flex flex-col w-9/12 px-3">
+									<p class="text-white">Clearly articulate your objectives when applying for a small business grant. Define what success will look like as a direct result of receiving the grant. Establish measurable criteria to determine when you've achieved your goals. Additionally, highlight the anticipated economic and social impact your project will have, demonstrating the significance of your proposed initiative.</p>
+								</div>
+							</div>
+						</div>
+						<div class="flex flex-col px-4 w-full sm:w-1/2 md:w-1/3 mb-6">
+							<div class="flex flex-wrap">
+								<div class="flex flex-col w-3/12 px-3">
+									<img src="icon6.svg" alt="" class="" />
+								</div>
+								<div class="flex flex-col w-9/12 px-3">
+									<p class="text-white">Create a detailed timeline that outlines the expected progress and milestones your project will achieve. These projections are critical, as they will be closely monitored if your grant application is successful and should align with the scope and objectives of the grant. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Features section ends-->
+
+		<!--Features Section Two started-->
+		<div class="py-12">
+			<section class="md:max-w-8xl mx-auto container">
+				<div class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+					<div class="flex flex-col lg:w-10/12 md:w-10/12 px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8 text-center">
+						<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide">What is a business grant?</h1>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8">A business grant is a monetary award provided to a business to support its growth and development. This funding can be utilized for various purposes, such as investing in training, acquiring equipment, or expanding into new markets. Typically, business grants are granted by the government or other organizations, and unlike business loans, they do not require repayment.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--Features Section Two ended-->
+
+		<!--Types of grant-->
+		<div class="py-12">
+			<section class="md:max-w-8xl mx-auto container">
+				<div class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+					<div class="flex flex-col lg:w-10/12 md:w-10/12 px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8">
+						<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide text-center">There are several grants available in the UK that cater to <span class="text-secondary">startups</span> and <span class="text-secondary">small businesses</span>.</h1>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 pb-8">Here's an overview of some of the grants and support programs:</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Innovation Grants:</strong> Organizations like Innovate UK offer innovation grants to support creative ideas and business growth, particularly those emerging from the UK's research institutions.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">The National Lottery Heritage Fund:</strong> This fund provides grants to preserve and enhance the UK's cultural heritage, including investments in museums, parks, historic sites, and cultural traditions.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">R&D Tax Credits:</strong> These are government incentives that provide cash payments to companies engaged in research and development projects related to science or technology.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Local Enterprise Partnerships (LEPs):</strong> LEPs are partnerships between local authorities and businesses that offer financial support, guidance, and resources to businesses in their respective regions. There are 38 LEPs in England.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">New Enterprise Allowance:</strong> This program provides funding and support to individuals looking to start or grow a business. Eligibility criteria include being 18 or older and receiving Universal Credit, Job Seeker's Allowance, Employment and Support Allowance, or Income Support.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">The Prince's Trust:</strong> Geared toward young people aged 18 to 30, The Prince's Trust supports those aiming to establish and operate their own businesses. The Trust offers funding, resources, training, and mentorship.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="py-12">
+			<section class="md:max-w-8xl mx-auto container">
+				<div class="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+					<div class="flex flex-col lg:w-10/12 md:w-10/12 px-4 lg:pr-3 justify-center md:mb-0 lg:mb-6 md:pt-0 lg:pt-8">
+						<h1 class="text-4xl sm:text-4xl font-extrabold leading-tight text-primary tracking-wide text-center">Looking for a small UK small <span class="text-secondary">business grant</span></h1>
+						<p class="text-xl text-primary font-light leading-relaxed pt-8 pb-8">To find small business grants in the UK, you can explore various resources and government agencies specific to your region. Here's where you can look for grants in each part of the UK:</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">In England:</strong></p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Growth Hubs:</strong> There are 38 regional Growth Hubs across England that can provide funding and guidance to boost your business in your local area. You can find a list of these hubs on the Local Enterprise Partnerships (LEP) Network website.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">In Scotland:</strong></p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Scottish Enterprise:</strong> Depending on your location in Scotland, you may be eligible for business grants from Scottish Enterprise. Visit the Scottish Enterprise website for information on available grants and funding opportunities.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Highlands and Islands Enterprise:</strong> If your business is based in the Highlands and Islands region, you may have access to grants from Highlands and Islands Enterprise. Check their website for details.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Local Councils:</strong> Local councils in Scotland may also offer grants and support programs for businesses. Contact your local council for information specific to your area.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">In Wales:</strong></p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">Business Wales:</strong> The Business Wales website features a finance locator that can help you search for grants your business may be eligible for. It provides information on application processes and various funding sources, including grants from the Welsh government, UK government, local authorities, and charitable organizations.</p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">In Northern Ireland:</strong></p>
+						<p class="text-md text-gray-600 font-light leading-relaxed pb-6"><strong class="font-extrabold text-gray-800">nibusinessinfo.co.uk:</strong> This website provides resources to help businesses in Northern Ireland explore grant options. You can find information on government support, innovation grants, research and development grants (such as Invest NI Innovation Vouchers), and more.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--Types of grant Ends-->
+
+		<!--Footer Starts-->
+		<div class="w-full border-gray-300 border-t lg:w-11/12 md:w-11/12 lg:mx-auto md:mx-auto">
+			<div class="container mx-auto py-16">
+				<div class="xl:flex flex-wrap justify-between pl-3 sm:pl-0">
+					<div class="w-11/12 xl:w-2/6 mx-auto lg:mx-0 xl:mx-0 mb-6 xl:mb-0">
+						<p class="text-gray-800 text-base">2020 PMC CO. All Rights Reserved</p>
+					</div>
+					<div class="w-11/12 xl:w-2/6 mx-auto lg:mx-0 xl:mx-0 mb-6 lg:mb-0 xl:mb-0">
+						<ul class="xl:flex lg:flex md:flex sm:flex justify-between">
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Terms of service</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Privacy Policy</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Security</a></li>
+							<li class="text-gray-800 hover:text-gray-900 text-base mb-4 sm:mb-0"><a href="#">Sitemap</a></li>
+						</ul>
+					</div>
+					<div class="w-11/12 xl:w-1/6 lg:w-1/6 sm:w-11/12 mx-auto lg:mx-0 xl:mx-0 mb-6 lg:mb-0 xl:mb-0 mt-8 lg:mt-8 xl:mt-0">
+						<div class="flex justify-start sm:justify-start xl:justify-end space-x-6 pr-2 xl:pr-0 lg:pr-0 md:pr-0 sm:pr-0">
+							<div>
+								<a href="#">
+									<svg aria-label="Twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+										<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Instagram" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+										<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+										<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+										<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Dribble" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dribbble" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#718096" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										<path stroke="none" d="M0 0h24v24H0z" />
+										<circle cx="12" cy="12" r="9" />
+										<path d="M9 3.6c5 6 7 10.5 7.5 16.2" />
+										<path d="M6.4 19c3.5-3.5 6-6.5 14.5-6.4" />
+										<path d="M3.1 10.75c5 0 9.814-.38 15.314-5" />
+									</svg>
+								</a>
+							</div>
+							<div>
+								<a href="#">
+									<svg aria-label="Github" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Footer Ends-->
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>

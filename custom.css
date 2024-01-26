@@ -1,0 +1,29 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.flickity-button {
+  display: none;
+}
+.flickity-page-dots {
+  display: none;
+}
+* {
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.text-primary {
+  color: #091642;
+}
+.text-secondary {
+  color: #bc0000;
+}
+.bg-primary {
+  background-color: #091642;
+}
+.bg-secondary {
+  background-color: #bc0000;
+}
+.bg-light {
+  background-color: #f9fbfc;
+}
